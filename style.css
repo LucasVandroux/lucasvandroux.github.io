@@ -27,6 +27,10 @@ a:hover {
 html,
 body {
   height: 100%;
+  background-image: url("background.jpeg");
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
   background-color: #333;
 }
 
@@ -106,5 +110,5 @@ body {
  * Footer
  */
 .mastfoot {
-  color: rgba(255, 255, 255, .5);
+  color: rgb(255, 255, 255);
 }
