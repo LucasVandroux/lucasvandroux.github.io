@@ -112,3 +112,12 @@ body {
 .mastfoot {
   color: rgb(255, 255, 255);
 }
+
+/*
+ * Modal
+ */
+.weixin-descr {
+  color: rgb(195, 195, 195);
+  text-decoration: none;
+  text-shadow: none;
+}
