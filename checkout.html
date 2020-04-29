@@ -147,13 +147,42 @@
           </div>
         </div>
       </div>
-
-
     </div>
   </div>
+
+  <!-- Payment Success Modal -->
+  <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="sucessModal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-body text-center">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <span style="font-size: 5em; color: forestgreen;"><i class="far fa-check-circle"></i></span>
+          
+          <h1 class="display-3">Merci!</h1>
+          <p class="lead">Nous t'avons envoyé un email avec ta confirmation de ta commande.</p>
+          <hr>
+          <p>
+            Des questions? <a href="mailto:lucas@VUEng.ch">Contactez-nous</a>
+          </p>
+          <p class="lead">
+            <button class="btn btn-primary btn-sm" type="button" class="close" data-dismiss="modal" aria-label="Close">
+              Revenir au Formulaire de Commande
+            </button>
+          </p>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <div id="paypal-button-container"></div>
+  <footer class="my-5 pt-5 text-muted text-center text-small">
+    <p class="mb-1">Ouistiti Print est un service de Vandroux Unlimited Engineering. © 2020 VUEng</p>
+    <ul class="list-inline">
+      <li class="list-inline-item"><a href="mailto:lucas@VUEng.ch">Contact</a>
+      </li>
+    </ul>
+  </footer>
 
   <script>
     // From options here: https://developer.paypal.com/docs/checkout/integration-features/customize-button
@@ -218,8 +247,8 @@
       onApprove: function (data, actions) {
         // This function captures the funds from the transaction.
         return actions.order.capture().then(function (details) {
-          // This function shows a transaction success message to your buyer.
-          alert('Transaction completed by ' + details.payer.name.given_name);
+          // This function shows a transaction success modal to your buyer.
+          $('#successModal').modal('toggle');
         });
       }
     }).render('#paypal-button-container-8');
@@ -234,7 +263,7 @@
         // This function captures the funds from the transaction.
         return actions.order.capture().then(function (details) {
           // This function shows a transaction success message to your buyer.
-          alert('Transaction completed by ' + details.payer.name.given_name);
+          $('#successModal').modal('toggle');
         });
       }
     }).render('#paypal-button-container-10');
@@ -249,7 +278,7 @@
         // This function captures the funds from the transaction.
         return actions.order.capture().then(function (details) {
           // This function shows a transaction success message to your buyer.
-          alert('Transaction completed by ' + details.payer.name.given_name);
+          $('#successModal').modal('toggle');
         });
       }
     }).render('#paypal-button-container-15');
@@ -264,21 +293,17 @@
         // This function captures the funds from the transaction.
         return actions.order.capture().then(function (details) {
           // This function shows a transaction success message to your buyer.
-          alert('Transaction completed by ' + details.payer.name.given_name);
+          $('#successModal').modal('toggle');
         });
       }
     }).render('#paypal-button-container-20');
 
   </script>
 
-  <footer class="my-5 pt-5 text-muted text-center text-small">
-    <p class="mb-1">Ouistiti Print est un service de Vandroux Unlimited Engineering. © 2020 VUEng</p>
-    <ul class="list-inline">
-      <li class="list-inline-item"><a href="mailto:lucas@VUEng.ch">Contact</a>
-      </li>
-    </ul>
-  </footer>
-  </div>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
 </body>
 
 </html>
