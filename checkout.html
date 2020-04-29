@@ -2,174 +2,282 @@
 <html lang="en">
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" /> <!-- Optimal Internet Explorer compatibility -->
-    <meta name="description" content="Checkout">
-    <meta name="author" content="Lucas Vandroux">
-    <link rel="icon" href="favicon.ico">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" /> <!-- Optimal Internet Explorer compatibility -->
+  <meta name="description" content="Checkout">
+  <meta name="author" content="Lucas Vandroux">
+  <link rel="icon" href="favicon.ico">
 
-    <title>Checkout</title>
+  <title>Checkout</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <!-- Bootstrap core CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-    <!-- Custom styles for this template -->
-    <link href="./style-checkout.css" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="./style-checkout.css" rel="stylesheet">
 
-    <!-- Font Awesome -->
-    <script src="https://kit.fontawesome.com/a0ca94bdb1.js" crossorigin="anonymous"></script>
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/a0ca94bdb1.js" crossorigin="anonymous"></script>
 </head>
 
 <body class="bg-light" data-gr-c-s-loaded="true">
-    <script
-        src="https://www.paypal.com/sdk/js?client-id=AStRSq0R6IXP8btSoY3Q_QnXxNn0ns5VykybVQK4_DusM3ZPCYrs842D4YCKo1JNXxJz2ofPusL2zw4v&currency=EUR&disable-funding=credit,card">
+  <script
+    src="https://www.paypal.com/sdk/js?client-id=AStRSq0R6IXP8btSoY3Q_QnXxNn0ns5VykybVQK4_DusM3ZPCYrs842D4YCKo1JNXxJz2ofPusL2zw4v&currency=EUR&locale=fr_FR">
     </script>
 
-    <div class="container">
-        <div class="py-5 text-center">
-            <img class="d-block mx-auto mb-4" src="./bootstrap-solid.svg" alt="" width="72" height="72">
-            <h2>Checkout form</h2>
-            <p class="lead">Below is an example form built entirely with Bootstrap’s form controls. Each required form
-                group has a validation state that can be triggered by attempting to submit the form without completing
-                it.</p>
-        </div>
+  <div class="container">
+    <div class="py-5 text-center">
+      <img class="d-block mx-auto mb-4" src="img/ouistitiPrint_logo-transparent.png" alt="" width="150" height="150">
+      <h1>Formulaire de Commande</h1>
+      <p class="lead"><a href="https://www.facebook.com/ouistitiprint" class="text-reset">Ouistiti Print</a> et <a href="https://www.instagram.com/byjuliec/" class="text-reset"><u>Julie Chiche</u></a> se sont associés pour te permettre d'acheter les 12 Illustrations "<u>Les Victoires du Quotidien en Confinement</u>". Les bénefices des ventes seront reversés à la <a
+        href="https://www.fondationdefrance.org/fr" class="text-reset" target="_blank"><u>Fondation de France</u></a> pour aider les soignants, les chercheurs et les plus fragiles durant la crise du coronavirus.</p>
+    </div>
 
-        <div class="container">
-        
-            <div class="row">
-              <div class="col-md-6">
-                <div class="card mb-6 shadow-sm">
-                  <img src="img/vdq_squares-8.png" class="card-img-top" alt="...">
-                  <div class="card-body">
-                  <h6 class="card-title">Option 1 - Les Victoires du Quotidien (8€ dont 2€ de don)</h6>
-                    <p class="card-text">Les 12 Illustrations de @byjuliec + 2€ de don pour la Fondation de France.</p>
-                    <div id="paypal-button-container-8"></div>
-                  </div>
-                </div>
-              </div>
+    <div class="alert alert-primary text-center" role="alert">
+      <i class="far fa-lightbulb"></i> Passe ta commande directement depuis Facebook Messenger avec le chatbot <a href="https://www.facebook.com/ouistitiprint" class="text-reset">Ouistiti Print</a>. <a href="https://m.me/ouistitiprint" class="btn btn-primary btn-sm" role="button"><i class="fab fa-facebook-messenger"></i> Commander</a>
+    </div>
 
-              <div class="col-md-6">
-                <div class="card mb-6 shadow-sm">
-                  <img src="img/vdq_squares-10.png" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h6 class="card-title">Option 2 - Les Victoires du Quotidien (10€ dont 4€ de don)</h6>
-                    <p class="card-text">Les 12 Illustrations de @byjuliec + 4€ de don pour la Fondation de France.</p>
-                    <div id="paypal-button-container-10"></div>
-                  </div>
-                </div>
-              </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card mb-6 shadow-sm text-center">
+          <img src="img/vdq_squares-8.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h4 class="card-title"><span class="badge badge-light">Option 1</span></h4>
+            <h1 class="card-title">8€</h1>
 
-              <div class="col-md-6">
-                <div class="card mb-6 shadow-sm">
-                  <img src="img/vdq_squares-15.png" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h6 class="card-title">Option 3 - Les Victoires du Quotidien (15€ dont 9€ de don)</h6>
-                    <p class="card-text">Les 12 Illustrations de @byjuliec + 9€ de don pour la Fondation de France.</p>
-                    <div id="paypal-button-container-15"></div>
-                  </div>
-                </div>
-              </div>
-      
-              <div class="col-md-6">
-                <div class="card mb-6 shadow-sm">
-                  <img src="img/vdq_squares-20.png" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h6 class="card-title">Option 4 - Les Victoires du Quotidien (20€ dont 14€ de don)</h6>
-                    <p class="card-text">Les 12 Illustrations de @byjuliec + 14€ de don pour la Fondation de France.</p>
-                    <div id="paypal-button-container-20"></div>
-                  </div>
-                </div>
-              </div>
-             
-
-            </div>
+          </div>
+          <ul class="list-group list-group-flush list-details-order">
+            <li class="list-group-item">
+              <h5>Inclus</h5>
+            </li>
+            <li class="list-group-item"><i class="fas fa-hand-holding-usd"></i> Don de <strong>2€</strong> à la <a
+                href="https://www.fondationdefrance.org/fr" class="text-reset" target="_blank">Fondation de France</a>
+            </li>
+            <li class="list-group-item"><i class="fas fa-images"></i> Les <strong>12 Illustrations</strong> de <a
+                href="https://www.instagram.com/byjuliec/" class="text-reset" target="_blank">Julie Chiche</a></li>
+            <li class="list-group-item"><i class="fas fa-truck"></i> <strong>Livraison Gratuite</strong> partout en
+              Europe</li>
+          </ul>
+          <div class="card-body">
+            <div class="paypal-button-container" id="paypal-button-container-8"></div>
           </div>
         </div>
+      </div>
 
-        <div id="paypal-button-container"></div>
+      <div class="col-md-6">
+        <div class="card border-danger mb-6 shadow-sm text-center">
+          <img src="img/vdq_squares-10.png" class="card-img-top" alt="...">
+          <div class="card-img-overlay text-left">
+            <h5><span class="badge badge-danger"><i class="fas fa-fire-alt"></i> Populaire</span></h5>
+          </div>
+          <div class="card-body">
+            <h4 class="card-title"><span class="badge badge-light">Option 2</span></h4>
+            <h1 class="card-title">10€</h1>
 
-        <script>
-            paypal.Buttons({
-                createOrder: function (data, actions) {
-                    // This function sets up the details of the transaction, including the amount and line item details.
-                    return actions.order.create({
-                        purchase_units: [{
-                            reference_id: 'store_mobile_world_order_1234',
-                            description: 'Mobile World Store order-1234',
-                            amount: {
-                                currency_code: 'EUR',
-                                value: 10.00,
-                                breakdown: {
-                                    item_total: {
-                                        currency_code: 'EUR',
-                                        value: 7.18,
-                                    },
-                                    shipping: {
-                                        currency_code: 'EUR',
-                                        value: 2.82,
-                                    },
-                                },
-                            },
-                            items: [
-                                {
-                                    name: '12x Illustrations',
-                                    description: 'La Série Complète des Victoires du Quotidien en Confinement par @byjuliec',
-                                    unit_amount: {
-                                        currency_code: 'EUR',
-                                        value: 3.18,
-                                    },
-                                    quantity: 1,
-                                    category: 'PHYSICAL_GOODS',
-                                },
-                                {
-                                    name: 'Donation',
-                                    description: 'Donation au profit de la Fondation de France',
-                                    unit_amount: {
-                                        currency_code: 'EUR',
-                                        value: 4,
-                                    },
-                                    quantity: 1,
-                                    category: 'PHYSICAL_GOODS',
-                                }
-                            ],
-                        }]
-                    });
-                },
-                onApprove: function (data, actions) {
-                    // This function captures the funds from the transaction.
-                    return actions.order.capture().then(function (details) {
-                        // This function shows a transaction success message to your buyer.
-                        alert('Transaction completed by ' + details.payer.name.given_name);
-                    });
-                }
-            }).render('#paypal-button-container-8');
-            paypal.Buttons().render('#paypal-button-container-10');
-            paypal.Buttons().render('#paypal-button-container-15');
-            paypal.Buttons().render('#paypal-button-container-20');
-  //This function displays Smart Payment Buttons on your web page.
-        </script>
+          </div>
+          <ul class="list-group list-group-flush list-details-order">
+            <li class="list-group-item">
+              <h5>Inclus</h5>
+            </li>
+            <li class="list-group-item"><i class="fas fa-hand-holding-usd"></i> Don de <strong>4€</strong> à la <a
+                href="https://www.fondationdefrance.org/fr" class="text-reset" target="_blank">Fondation de France</a>
+            </li>
+            <li class="list-group-item"><i class="fas fa-images"></i> Les <strong>12 Illustrations</strong> de <a
+                href="https://www.instagram.com/byjuliec/" class="text-reset" target="_blank">Julie Chiche</a></li>
+            <li class="list-group-item"><i class="fas fa-truck"></i> <strong>Livraison Gratuite</strong> partout en
+              Europe</li>
+          </ul>
+          <div class="card-body">
+            <div class="paypal-button-container" id="paypal-button-container-10"></div>
+          </div>
+        </div>
+      </div>
 
-        <footer class="my-5 pt-5 text-muted text-center text-small">
-            <p class="mb-1">© 2017-2019 Company Name</p>
-            <ul class="list-inline">
-                <li class="list-inline-item"><a href="https://getbootstrap.com/docs/4.4/examples/checkout/#">Privacy</a>
-                </li>
-                <li class="list-inline-item"><a href="https://getbootstrap.com/docs/4.4/examples/checkout/#">Terms</a>
-                </li>
-                <li class="list-inline-item"><a href="https://getbootstrap.com/docs/4.4/examples/checkout/#">Support</a>
-                </li>
-            </ul>
-        </footer>
+      <div class="col-md-6">
+        <div class="card mb-6 shadow-sm text-center">
+          <img src="img/vdq_squares-15.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h4 class="card-title"><span class="badge badge-light">Option 3</span></h4>
+            <h1 class="card-title">15€</h1>
+
+          </div>
+          <ul class="list-group list-group-flush list-details-order">
+            <li class="list-group-item">
+              <h5>Inclus</h5>
+            </li>
+            <li class="list-group-item"><i class="fas fa-hand-holding-usd"></i> Don de <strong>9€</strong> à la <a
+                href="https://www.fondationdefrance.org/fr" class="text-reset" target="_blank">Fondation de France</a>
+            </li>
+            <li class="list-group-item"><i class="fas fa-images"></i> Les <strong>12 Illustrations</strong> de <a
+                href="https://www.instagram.com/byjuliec/" class="text-reset" target="_blank">Julie Chiche</a></li>
+            <li class="list-group-item"><i class="fas fa-truck"></i> <strong>Livraison Gratuite</strong> partout en
+              Europe</li>
+          </ul>
+          <div class="card-body">
+            <div class="paypal-button-container" id="paypal-button-container-15"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="card mb-6 shadow-sm text-center">
+          <img src="img/vdq_squares-20.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h4 class="card-title"><span class="badge badge-light">Option 4</span></h4>
+            <h1 class="card-title">20€</h1>
+
+          </div>
+          <ul class="list-group list-group-flush list-details-order">
+            <li class="list-group-item">
+              <h5>Inclus</h5>
+            </li>
+            <li class="list-group-item"><i class="fas fa-hand-holding-usd"></i> Don de <strong>14€</strong> à la <a
+                href="https://www.fondationdefrance.org/fr" class="text-reset" target="_blank">Fondation de France</a>
+            </li>
+            <li class="list-group-item"><i class="fas fa-images"></i> Les <strong>12 Illustrations</strong> de <a
+                href="https://www.instagram.com/byjuliec/" class="text-reset" target="_blank">Julie Chiche</a></li>
+            <li class="list-group-item"><i class="fas fa-truck"></i> <strong>Livraison Gratuite</strong> partout en
+              Europe</li>
+          </ul>
+          <div class="card-body">
+            <div class="paypal-button-container" id="paypal-button-container-20"></div>
+          </div>
+        </div>
+      </div>
+
+
     </div>
-    <script src="./js/jquery-3.4.1.slim.min.js"></script>
-    <script>window.jQuery || document.write('<script src="/docs/4.4/assets/js/vendor/jquery.slim.min.js"><\/script>')</script>
+  </div>
+  </div>
 
-    <script src="./js/bootstrap.bundle.min.js"></script>
-    <script src="./js/form-validation.js"></script>
+  <div id="paypal-button-container"></div>
 
+  <script>
+    // From options here: https://developer.paypal.com/docs/checkout/integration-features/customize-button
+    // Live Demo: https://developer.paypal.com/demo/checkout/#/pattern/checkout
+    var paypalStyle = {
+      layout: 'vertical',
+      label: 'pay',
+      tagline: false,
+    };
 
+    function paypalDonation(donation_amount) {
+      return {
+        purchase_units: [{
+          description: 'Les Victoires du Quotidien en Confinement par Julie Chiche + Donation pour la Fondation de France',
+          amount: {
+            currency_code: 'EUR',
+            value: 6 + donation_amount,
+            breakdown: {
+              item_total: {
+                currency_code: 'EUR',
+                value: 6 + donation_amount,
+              },
+              shipping: {
+                currency_code: 'EUR',
+                value: 0.00,
+              },
+            },
+          },
+          items: [
+            {
+              name: '12x Illustrations',
+              description: 'La Série Complète des Victoires du Quotidien en Confinement par Julie Chiche',
+              unit_amount: {
+                currency_code: 'EUR',
+                value: 6.00,
+              },
+              quantity: 1,
+              category: 'PHYSICAL_GOODS',
+            },
+            {
+              name: 'Donation',
+              description: 'Donation au profit de la Fondation de France',
+              unit_amount: {
+                currency_code: 'EUR',
+                value: donation_amount,
+              },
+              quantity: 1,
+              category: 'PHYSICAL_GOODS',
+            }
+          ],
+        }]
+      }
+    };
+
+    // --- Paypal button Option 1 ---
+    paypal.Buttons({
+      style: paypalStyle,
+      createOrder: function (data, actions) {
+        // This function sets up the details of the transaction, including the amount and line item details.
+        return actions.order.create(paypalDonation(2));
+      },
+      onApprove: function (data, actions) {
+        // This function captures the funds from the transaction.
+        return actions.order.capture().then(function (details) {
+          // This function shows a transaction success message to your buyer.
+          alert('Transaction completed by ' + details.payer.name.given_name);
+        });
+      }
+    }).render('#paypal-button-container-8');
+
+    // --- Paypal button Option 2 ---
+    paypal.Buttons({
+      style: paypalStyle, createOrder: function (data, actions) {
+        // This function sets up the details of the transaction, including the amount and line item details.
+        return actions.order.create(paypalDonation(4));
+      },
+      onApprove: function (data, actions) {
+        // This function captures the funds from the transaction.
+        return actions.order.capture().then(function (details) {
+          // This function shows a transaction success message to your buyer.
+          alert('Transaction completed by ' + details.payer.name.given_name);
+        });
+      }
+    }).render('#paypal-button-container-10');
+
+    // --- Paypal button Option 3 ---
+    paypal.Buttons({
+      style: paypalStyle, createOrder: function (data, actions) {
+        // This function sets up the details of the transaction, including the amount and line item details.
+        return actions.order.create(paypalDonation(9));
+      },
+      onApprove: function (data, actions) {
+        // This function captures the funds from the transaction.
+        return actions.order.capture().then(function (details) {
+          // This function shows a transaction success message to your buyer.
+          alert('Transaction completed by ' + details.payer.name.given_name);
+        });
+      }
+    }).render('#paypal-button-container-15');
+
+    // --- Paypal button Option 4 ---
+    paypal.Buttons({
+      style: paypalStyle, createOrder: function (data, actions) {
+        // This function sets up the details of the transaction, including the amount and line item details.
+        return actions.order.create(paypalDonation(14));
+      },
+      onApprove: function (data, actions) {
+        // This function captures the funds from the transaction.
+        return actions.order.capture().then(function (details) {
+          // This function shows a transaction success message to your buyer.
+          alert('Transaction completed by ' + details.payer.name.given_name);
+        });
+      }
+    }).render('#paypal-button-container-20');
+
+  </script>
+
+  <footer class="my-5 pt-5 text-muted text-center text-small">
+    <p class="mb-1">Ouistiti Print est un service de Vandroux Unlimited Engineering. © 2020 VUEng</p>
+    <ul class="list-inline">
+      <li class="list-inline-item"><a href="mailto:lucas@VUEng.ch">Contact</a>
+      </li>
+    </ul>
+  </footer>
+  </div>
 </body>
 
 </html>
