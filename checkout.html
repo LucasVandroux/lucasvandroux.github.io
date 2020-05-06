@@ -163,6 +163,63 @@
           </div>
         </div>
       </div>
+      <!-- Option 5 - Poster -->
+      <div class="col-md-6">
+        <div class="card mb-6 shadow-sm text-center">
+          <img src="img/vdq_poster.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h4 class="card-title"><span class="badge badge-light">Poster</span></h4>
+            <h1 class="card-title">30€</h1>
+
+          </div>
+          <ul class="list-group list-group-flush list-details-order">
+            <li class="list-group-item">
+              <h5>Inclus</h5>
+            </li>
+            <li class="list-group-item"><i class="fas fa-hand-holding-usd"></i> Don de <strong>10€</strong> à la <a
+                href="https://www.fondationdefrance.org/fr" class="text-reset" target="_blank">Fondation de France</a>
+            </li>
+            <li class="list-group-item"><i class="fas fa-image"></i> <strong>1 Illustration</strong> au choix <br><em>(Nous vous contacterons par email après votre achat pour la choisir)</em></li>
+            <li class="list-group-item"><i class="fas fa-drafting-compass"></i> Imprimé sur <strong>papier photo
+                100% cotton</strong> (Format A4)</li>
+            <li class="list-group-item"><i class="fas fa-truck"></i> <strong>Livraison 15€</strong> partout en
+              Europe</li>
+          </ul>
+          <div class="card-body">
+            <div class="paypal-button-container" id="paypal-button-container-poster"></div>
+          </div>
+        </div>
+      </div>
+      <!-- Option 6 - Cadre -->
+      <div class="col-md-6">
+        <div class="card border-warning mb-6 shadow-sm text-center">
+          <img src="img/vdq_frame.png" class="card-img-top" alt="...">
+          <div class="card-img-overlay text-left">
+            <h5><span class="badge badge-warning"><i class="fas fa-crown"></i></i> Qualité Premium</span></h5>
+          </div>
+          <div class="card-body">
+            <h4 class="card-title"><span class="badge badge-light">Encadré</span></h4>
+            <h1 class="card-title">60€</h1>
+
+          </div>
+          <ul class="list-group list-group-flush list-details-order">
+            <li class="list-group-item">
+              <h5>Inclus</h5>
+            </li>
+            <li class="list-group-item"><i class="fas fa-hand-holding-usd"></i> Don de <strong>20€</strong> à la <a
+                href="https://www.fondationdefrance.org/fr" class="text-reset" target="_blank">Fondation de France</a>
+            </li>
+            <li class="list-group-item"><i class="fas fa-image"></i> <strong>1 Illustration</strong> au choix <strong>encadrée</strong> <br><em>(Nous vous contacterons par email après votre achat pour choisir l'illustration et la couleur du cadre)</em></li>
+            <li class="list-group-item"><i class="fas fa-drafting-compass"></i> Imprimé sur <strong>papier photo
+                100% cotton</strong> (Format A4)</li>
+            <li class="list-group-item"><i class="fas fa-truck"></i> <strong>Livraison 20€</strong> partout en
+              Europe</li>
+          </ul>
+          <div class="card-body">
+            <div class="paypal-button-container" id="paypal-button-container-frame"></div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -254,6 +311,100 @@
       }
     };
 
+    function paypalPoster() {
+      value_good = 20.0;
+      value_donation = 10.0;
+      value_shipping = 15.0;
+      return {
+        purchase_units: [{
+          description: '1x Illustration par Julie Chiche au foramt A4 + Donation pour la Fondation de France',
+          amount: {
+            currency_code: 'EUR',
+            value: value_good + value_donation + value_shipping,
+            breakdown: {
+              item_total: {
+                currency_code: 'EUR',
+                value: value_good + value_donation,
+              },
+              shipping: {
+                currency_code: 'EUR',
+                value: value_shipping,
+              },
+            },
+          },
+          items: [
+            {
+              name: '1x Illustrations (Format A4)',
+              description: '1x Illustration des Victoires du Quotidien en Confinement par Julie Chiche au format A4 imprimée sur papier photo 100% cotton.',
+              unit_amount: {
+                currency_code: 'EUR',
+                value: value_good,
+              },
+              quantity: 1,
+              category: 'PHYSICAL_GOODS',
+            },
+            {
+              name: 'Donation',
+              description: 'Donation au profit de la Fondation de France',
+              unit_amount: {
+                currency_code: 'EUR',
+                value: value_donation,
+              },
+              quantity: 1,
+              category: 'PHYSICAL_GOODS',
+            }
+          ],
+        }]
+      }
+    };
+
+    function paypalPoster() {
+      value_good = 40.0;
+      value_donation = 20.0;
+      value_shipping = 20.0;
+      return {
+        purchase_units: [{
+          description: '1x Illustration par Julie Chiche au foramt A4 encadrée + Donation pour la Fondation de France',
+          amount: {
+            currency_code: 'EUR',
+            value: value_good + value_donation + value_shipping,
+            breakdown: {
+              item_total: {
+                currency_code: 'EUR',
+                value: value_good + value_donation,
+              },
+              shipping: {
+                currency_code: 'EUR',
+                value: value_shipping,
+              },
+            },
+          },
+          items: [
+            {
+              name: '1x Illustrations Encadrée (Format A4)',
+              description: '1x Illustration des Victoires du Quotidien en Confinement par Julie Chiche au format A4 imprimée sur papier photo 100% cotton et encadrée.',
+              unit_amount: {
+                currency_code: 'EUR',
+                value: value_good,
+              },
+              quantity: 1,
+              category: 'PHYSICAL_GOODS',
+            },
+            {
+              name: 'Donation',
+              description: 'Donation au profit de la Fondation de France',
+              unit_amount: {
+                currency_code: 'EUR',
+                value: value_donation,
+              },
+              quantity: 1,
+              category: 'PHYSICAL_GOODS',
+            }
+          ],
+        }]
+      }
+    };
+
     // --- Paypal button Option 1 ---
     paypal.Buttons({
       style: paypalStyle,
@@ -314,6 +465,36 @@
         });
       }
     }).render('#paypal-button-container-20');
+
+    // --- Paypal button Poster ---
+    paypal.Buttons({
+      style: paypalStyle, createOrder: function (data, actions) {
+        // This function sets up the details of the transaction, including the amount and line item details.
+        return actions.order.create(paypalPoster);
+      },
+      onApprove: function (data, actions) {
+        // This function captures the funds from the transaction.
+        return actions.order.capture().then(function (details) {
+          // This function shows a transaction success message to your buyer.
+          $('#successModal').modal('toggle');
+        });
+      }
+    }).render('#paypal-button-container-poster');
+
+    // --- Paypal button Frame ---
+    paypal.Buttons({
+      style: paypalStyle, createOrder: function (data, actions) {
+        // This function sets up the details of the transaction, including the amount and line item details.
+        return actions.order.create(paypalFrame);
+      },
+      onApprove: function (data, actions) {
+        // This function captures the funds from the transaction.
+        return actions.order.capture().then(function (details) {
+          // This function shows a transaction success message to your buyer.
+          $('#successModal').modal('toggle');
+        });
+      }
+    }).render('#paypal-button-container-frame');
 
   </script>
 
