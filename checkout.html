@@ -334,7 +334,7 @@
           },
           items: [
             {
-              name: '1x Illustrations (Format A4)',
+              name: '1x Illustration (Format A4)',
               description: '1x Illustration des Victoires du Quotidien en Confinement par Julie Chiche au format A4 imprimée sur papier photo 100% cotton.',
               unit_amount: {
                 currency_code: 'EUR',
@@ -358,13 +358,13 @@
       }
     };
 
-    function paypalPoster() {
+    function paypalFrame() {
       value_good = 40.0;
       value_donation = 20.0;
       value_shipping = 20.0;
       return {
         purchase_units: [{
-          description: '1x Illustration par Julie Chiche au foramt A4 encadrée + Donation pour la Fondation de France',
+          description: '1x Illustration par Julie Chiche au foramt A4 dans son cadre + Donation pour la Fondation de France',
           amount: {
             currency_code: 'EUR',
             value: value_good + value_donation + value_shipping,
@@ -381,8 +381,8 @@
           },
           items: [
             {
-              name: '1x Illustrations Encadrée (Format A4)',
-              description: '1x Illustration des Victoires du Quotidien en Confinement par Julie Chiche au format A4 imprimée sur papier photo 100% cotton et encadrée.',
+              name: '1x Illustration Encadrée (Format A4)',
+              description: '1x Illustration par Julie Chiche au format A4 dans son cadre imprimée sur papier photo 100% cotton.',
               unit_amount: {
                 currency_code: 'EUR',
                 value: value_good,
@@ -470,7 +470,7 @@
     paypal.Buttons({
       style: paypalStyle, createOrder: function (data, actions) {
         // This function sets up the details of the transaction, including the amount and line item details.
-        return actions.order.create(paypalPoster);
+        return actions.order.create(paypalPoster());
       },
       onApprove: function (data, actions) {
         // This function captures the funds from the transaction.
@@ -485,7 +485,7 @@
     paypal.Buttons({
       style: paypalStyle, createOrder: function (data, actions) {
         // This function sets up the details of the transaction, including the amount and line item details.
-        return actions.order.create(paypalFrame);
+        return actions.order.create(paypalFrame());
       },
       onApprove: function (data, actions) {
         // This function captures the funds from the transaction.
